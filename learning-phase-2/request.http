@@ -15,9 +15,9 @@ Content-Type: application/json
 
 {
   "pet": {
-    "name": "Fido",
+    "name": "MIAO",
     "imageUrl": "https://cdn2.thecatapi.com/images/xBR2jSIG7.jpg",
-    "birthDate": "2020-01-01T00:00:00.000Z",
+    "birthDate": "2020-03-03T00:00:00.000Z",
     "gender": "Female",
     "ownerId": 1
   }
@@ -66,3 +66,36 @@ Content-Type: application/json
     "petId": 1
   }
 }
+
+### search pets by name
+GET {{baseUrl}}/pets?name=MIAO HTTP/1.1
+Content-Type: application/json
+
+### signup
+POST {{baseUrl}}/signup HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "saki.6line.1027@gmail.com",
+  "password": "meaomiao"
+}
+
+### signin
+POST {{baseUrl}}/signin HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "saki.6line.1027@gmail.com",
+  "password": "meaomiao"
+}
+
+### upload image
+POST {{baseUrl}}/images HTTP/1.1
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="Sun Bee.jpg"
+Content-Type: image/jpeg
+
+< images\Sun Bee.jpg
+--MyBoundary--
